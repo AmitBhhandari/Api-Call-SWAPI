@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
-
+ 
 import MoviesList from "./components/MoviesList";
+import MoviesForm from "./components/MoviesForm";
 import "./App.css";
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
   useEffect(()=>{
     fetchMoviesHandler()
   },[fetchMoviesHandler])
+
+
   //let content = <p>Found no movies</p>;
 
   //if (movies.length > 0) {
@@ -54,6 +57,7 @@ function App() {
 
   return (
     <React.Fragment>
+      <MoviesForm/>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
